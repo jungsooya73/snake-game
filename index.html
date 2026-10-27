@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스네이크 게임</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <h1>SNAKE</h1>
+
+    <div class="scoreboard">
+      <div class="stat">
+        <span class="label">점수</span>
+        <span id="score" class="value">0</span>
+      </div>
+      <div class="stat center">
+        <span class="label">레벨</span>
+        <span id="level" class="value">1</span>
+      </div>
+      <div class="stat right">
+        <span class="label">최고 점수</span>
+        <span id="best" class="value">0</span>
+      </div>
+    </div>
+
+    <div id="difficulty" class="difficulty">
+      <button data-level="easy">쉬움</button>
+      <button data-level="normal">보통</button>
+      <button data-level="hard">어려움</button>
+      <button data-level="extreme">매우 어려움</button>
+    </div>
+
+    <div class="board">
+      <canvas id="canvas"></canvas>
+
+      <div id="overlay" class="overlay">
+        <p id="title" class="overlay-title">READY?</p>
+        <p id="message" class="overlay-msg">방향키로 뱀을 조종하세요</p>
+        <button id="startBtn" class="start-btn">게임 시작</button>
+        <p class="hint">Enter / Space 시작 · P 일시정지 · M 소리</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="pauseBtn" class="pause-btn" disabled>⏸ 일시정지</button>
+      <button id="muteBtn" class="icon-btn" title="소리 켜기/끄기 (M)">🔊</button>
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
